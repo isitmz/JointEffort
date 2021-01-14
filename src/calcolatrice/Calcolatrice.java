@@ -29,10 +29,16 @@ public class Calcolatrice {
     {
         return num1 + num2;
     }
+    
+    /**
+     * Fa la moltiplicazione tra due numeri e conserva il risultato / Svolto da Lisitano
+     * @param num1 il primo numero da moltiplicare
+     * @param num2 il secondo numero da moltiplicare
+     */
 
     public double sottrazione(double num1, double num2)
     {
-        return 0;//Lisitano
+        return num1-num2;
     }
 
     /**
