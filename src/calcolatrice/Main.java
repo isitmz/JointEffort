@@ -1,6 +1,9 @@
 package calcolatrice;
 import java.util.*;
 
+/**
+ * La classe Main contiene il metodo main
+ */
 public class Main 
 {
     public static void main(String[] args)
@@ -9,7 +12,7 @@ public class Main
         Scanner stringInput = new Scanner(System.in);
         Scanner doubleInput = new Scanner(System.in);
         String risposta, operazione;
-        double n1=0, n2=0;
+        double n1 = 0, n2 = 0;
         
     }
 }

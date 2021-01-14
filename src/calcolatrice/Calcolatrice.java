@@ -1,5 +1,17 @@
 package calcolatrice;
 
+/**
+ * La classe calcolatrice permette di effettuare calcoli.
+ * Permette di effettuare somma, differenza, prodotto, divisione e resto
+ *
+ * @author Marius Zaharia
+ * @author Mattia Mercadante
+ * @author Federico Corni
+ * @author Marco Iori
+ * @author Francesco Lisitano
+ * @version 1.0
+ *
+ */
 public class Calcolatrice {
     private double risultato;
 
@@ -13,31 +25,36 @@ public class Calcolatrice {
      * @param num1 il primo numero da sommare
      * @param num2 il secondo numero da sommare
      */
-    public void somma(double num1, double num2)
+    public double somma(double num1, double num2)
     {
-        risultato = num1 + num2;
+        return num1 + num2;
     }
 
-    public void sottrazione(double num1, double num2)
+    public double sottrazione(double num1, double num2)
     {
-        //Lisitano
+        return 0;//Lisitano
     }
 
-    public void prodotto(double num1, double num2)
+    /**
+     * Fa la moltiplicazione tra due numeri e conserva il risultato / Svolto da Marius Zaharia
+     * @param num1 il primo numero da moltiplicare
+     * @param num2 il secondo numero da moltiplicare
+     */
+    public double prodotto(double num1, double num2)
     {
-        risultato = num1 * num2;
+        return num1 * num2;
     }
 
-    public void divisione(double num1, double num2)
+    public double divisione(double num1, double num2)
     {
-        //Corni
+        return 0; //Corni
     }
 
-    public void modulo(double num1, double num2)
+    public double modulo(double num1, double num2)
     {
-        //Iori
+        return 0; //Iori
     }
-    
+
     /**
      * Esegue il calcolo in base all'operazione / Svolto da Mattia Mercadante e Marius Zaharia
      * @param operazione l'operazione da eseguire
@@ -48,15 +65,19 @@ public class Calcolatrice {
     {
         switch (operazione.charAt(0))
         {
-            case '+' -> somma(num1, num2);
-            case '-' -> sottrazione(num1, num2);
-            case '*' -> prodotto(num1, num2);
-            case '/' -> divisione(num1, num2);
-            case '%' -> modulo(num1, num2);
+            case '+' -> risultato = somma(num1, num2);
+            case '-' -> risultato = sottrazione(num1, num2);
+            case '*' -> risultato = prodotto(num1, num2);
+            case '/' -> risultato = divisione(num1, num2);
+            case '%' -> risultato = modulo(num1, num2);
             default -> throw new IllegalStateException("Unexpected value: " + operazione.charAt(0));
         }
     }
-    
+
+    /**
+     * Mostra il risultato
+     * @return risultato della calcolatrice
+     */
     public double getRisultato()
     {
         return risultato;
