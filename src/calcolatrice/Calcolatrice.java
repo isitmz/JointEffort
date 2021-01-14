@@ -51,9 +51,15 @@ public class Calcolatrice {
         return num1 * num2;
     }
 
+    /**
+     * Fa la divisione tra due numeri e conserva il risultato / Svolto da Corni
+     * @param num1 il primo numero da dividere
+     * @param num2 il secondo numero da dividere
+     */
+
     public double divisione(double num1, double num2)
     {
-        return 0; //Corni
+        return num1 / num2;
     }
 
     public double modulo(double num1, double num2)
